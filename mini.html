@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden; 
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  background-image: url('https://wallpapercave.com/wp/wp3124301.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: -2;
+  
+  
+}
+
+
+#content {
+  height: 45em;
+} p {
+  max-width: 30em;
+  color: white;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+  letter-spacing:0.1em;
+  text-align:center;
+  margin: 40px auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: 150%;
+  font-variant: small-caps;
+  font-weight: 900;
+}
+.container {
+  padding-top: 200px;
+  text-align: center;
+}
+p {
+  border: 5px black;
+  border-style: ridge;
+  padding :80px
+}
+
+</style>
+
+</head>
+<body translate="no">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body >
+    
+<div class="container">
+
+<div id="display"></div>
+<div id="content">
+<p id="quote">"the people who are crazy enough to think they can change the world are the ones who do." <br />- Steve Jobs</p>
+</div>
+</div>
+
+
+<script id="rendered-js">
+
+
+
+function genQuote() {
+  var randNum = Math.floor(Math.random() * 8) + 1;
+  document.getElementById('quote').innerHTML = quotes[randNum];
+  
+}
+
+
+var quotes = ["Blank", "\"The greatest glory in living lies not in never falling, but in rising every time we fall.\" <br>-  -Nelson Mandela"
+,"\"Either I will find a way, or I will make one.\"<br> - Philip Sidney",
+"\"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.\"<br>- Thomas A. Edison",
+"\"You are never too old to set another goal or to dream a new dream.\"<br>- C.S Lewis",
+"\"The way to get started is to quit talking and begin doing.\"<br>- Walt Disney", 
+"\"Never give up, for that is just the place and time that the tide will turn.\"<br>- Harriet Beecher Stowe",
+"\"It is during our darkest moments that we must focus to see the light.\"<br>- Aristotle",
+"\"Even if you’re on the right track, you’ll get run over if you just sit there.\"<br>- Will Rogers"];
+setInterval(genQuote, 4000);
+
+    </script>
+</body>
+</html>
